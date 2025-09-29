@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@600&display=swap');
+body {
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background 0.3s, color 0.3s;
+}
+.big-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0
+}
+.header p{
+    font-size: large;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+#display {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  flex: 1;
+  max-width: 150px;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+ul li {
+  padding: 6px 10px;
+  font-size: 0.95rem;
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: gray
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+@media (max-width: 600px) {
+  #display {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  button {
+    max-width: none;
+    width: 100%;
+  }
+
+  ul li {
+    font-size: 0.85rem;
+  }
+}
